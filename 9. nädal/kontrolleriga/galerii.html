@@ -1,0 +1,6 @@
+	<h3>Fotod</h3>
+	<div id="gallery">
+        <?php foreach($photos as $key => $photo): ?>
+		  <img src="<?php echo $photo['link']; ?>" alt="<?php echo $photo['alt']; ?>"/>
+        <?php endforeach; ?>
+	</div>

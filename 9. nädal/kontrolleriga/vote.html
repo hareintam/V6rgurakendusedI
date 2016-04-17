@@ -1,0 +1,14 @@
+<h3>Vali oma lemmik :)</h3>
+<form action="?mode=tulemus" method="POST">
+	<?php foreach($photos as $key => $photo): ?>
+	<p>
+		<?php $count = $key + 1; ?>
+		<label for="<?php echo 'p{$count}'; ?>">
+			<img src="<?php echo $photo['link']; ?>" alt="<?php echo $photo['alt']; ?>" height="100" />
+		</label>
+		<input type="radio" value="<?php echo $count; ?>" id="<?php echo 'p{$count}'; ?>" name="photo"/>
+	</p>
+	<?php endforeach; ?>
+	<br/>
+	<input type="submit" value="Valin!"/>
+</form>
